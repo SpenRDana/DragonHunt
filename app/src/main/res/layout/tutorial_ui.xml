@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:background="#C0C0C0"
+        android:id="@+id/iconbar"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@drawable/dialogbar" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/iconbar"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tutorialpicture"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerInside"
+            android:src="@drawable/tutorialdialog"
+            android:layout_width="130dp"
+            android:layout_height="127dp"/>
+        <TextView
+            android:layout_marginRight="10dp"
+            android:textSize="11.6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In DragonHunt II, you are a yellow square on a grid-like map. By tapping arrow keys, the player moves left, right, up, and down. After each movement, there will be an event which could range from battles, wandering traders, disasters, dungeons, or exploration. Each event has its own interaction that can be accessed on the final screen on the viewpager. "/>
+
+    </LinearLayout>
+</RelativeLayout>

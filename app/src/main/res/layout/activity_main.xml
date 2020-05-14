@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:background="#ffffff"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_height="250dp"
+        android:layout_width="wrap_content" />
+    <ImageButton
+        android:id="@+id/play"
+        android:background="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:scaleType="centerInside"
+        android:layout_below="@id/logo"
+        android:src="@drawable/play" />
+    <ImageButton
+        android:id="@+id/tutorial"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:scaleType="centerInside"
+        android:layout_below="@id/play"
+        android:src="@drawable/tutorial" />
+    <ImageButton
+        android:id="@+id/options"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:scaleType="centerInside"
+        android:layout_below="@id/tutorial"
+        android:src="@drawable/options" />
+</RelativeLayout>
