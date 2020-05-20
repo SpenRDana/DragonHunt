@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_marginTop="5dp"
@@ -13,87 +12,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Character Creator"/>
-    <LinearLayout
-        android:orientation="horizontal"
+    <FrameLayout
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:id="@+id/head"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-        <ImageButton
-            android:id="@+id/topL"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/leftarrow"/>
-        <ImageView
-            android:id="@+id/head"
-            android:layout_gravity="center"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/head1"/>
-        <ImageButton
-            android:id="@+id/topR"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rightarrow"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        />
+    <FrameLayout
+        android:id="@+id/torso"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-        <ImageButton
-            android:id="@+id/middleL"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/leftarrow"/>
-        <ImageView
-            android:id="@+id/shirt"
-            android:layout_gravity="center"
-            android:layout_width="260dp"
-            android:layout_height="150dp"
-            android:src="@drawable/shirt1"/>
-        <ImageButton
-            android:id="@+id/middleR"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rightarrow"/>
-        </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        />
+    <FrameLayout
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:id="@+id/legs"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-        <ImageButton
-            android:id="@+id/bottomL"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/leftarrow"/>
-        <ImageView
-            android:id="@+id/pants"
-            android:layout_gravity="center"
-            android:layout_width="260dp"
-            android:layout_height="150dp"
-            android:src="@drawable/pants1"/>
-        <ImageButton
-            android:id="@+id/bottomR"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rightarrow"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        />
     <Button
         android:id="@+id/finish"
         android:layout_gravity="center"
