@@ -2,11 +2,27 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Movement">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This fragment two"/>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="70dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/head1"/>
+    <ImageView
+        android:layout_width="125.5dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/shirt1"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/pants1"/>
 </LinearLayout>
