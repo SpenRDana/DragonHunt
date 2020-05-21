@@ -12,12 +12,14 @@ import android.widget.ImageView;
 
 public class BodyPartFragment extends Fragment {
     private static final String KEY_IMAGES = "image";
+    private static final String KEY_PART = "bodypart";
     private int index = 0;
 
-    public static BodyPartFragment newInstance(int[] images){
+    public static BodyPartFragment newInstance(int[] images, String part){
         BodyPartFragment fragment = new BodyPartFragment();
         Bundle bundle = new Bundle();
         bundle.putIntArray(KEY_IMAGES, images);
+        bundle.putString(KEY_PART, part);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -28,6 +30,8 @@ public class BodyPartFragment extends Fragment {
         final int[] arrayImage = getArguments().getIntArray(KEY_IMAGES);
         final ImageView bodypart = rootView.findViewById(R.id.middle);
         bodypart.setImageResource(arrayImage[index]);
+
+        final String body = getArguments().getString(KEY_PART);
 
         final ImageButton right = rootView.findViewById(R.id.right);
         final ImageButton left = rootView.findViewById(R.id.left);
@@ -41,6 +45,7 @@ public class BodyPartFragment extends Fragment {
                         index++;
                     }
                     bodypart.setImageResource(arrayImage[index]);
+                    onCharacterCreatedListener.onCharacterCreated(arrayImage[index], body);
                 }
                 else {
                     if (index == 0) {
@@ -49,6 +54,7 @@ public class BodyPartFragment extends Fragment {
                         index--;
                     }
                     bodypart.setImageResource(arrayImage[index]);
+                    onCharacterCreatedListener.onCharacterCreated(arrayImage[index], body);
                 }
             }
         };
@@ -56,5 +62,15 @@ public class BodyPartFragment extends Fragment {
         left.setOnClickListener(BL);
 
         return rootView;
+    }
+
+    public interface OnCharacterCreatedListener{
+        public void onCharacterCreated(int ID, String bodyID);
+    }
+
+    OnCharacterCreatedListener onCharacterCreatedListener;
+
+    public void setOnCharacterCreatedListener(OnCharacterCreatedListener listener){
+        this.onCharacterCreatedListener = listener;
     }
 }
